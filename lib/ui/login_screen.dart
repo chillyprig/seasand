@@ -25,6 +25,11 @@ class LoginScreen extends StatelessWidget {
 
     return new Scaffold(
         body: new Container(
+            decoration: new BoxDecoration(
+                image: new DecorationImage(
+                    image: new AssetImage("assets/seasand_splash.jpg"),
+                    fit: BoxFit.cover),
+            ),
             padding: new EdgeInsets.all(32.0),
             child: new Column(
               children: <Widget>[
