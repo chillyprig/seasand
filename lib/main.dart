@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:sea_sand/learning/random_words.dart';
+import 'package:sea_sand/ui/login_screen.dart';
 
 void main() => runApp(new SeaSandApp());
 
@@ -8,16 +7,16 @@ class SeaSandApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Welcome my friend',
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text('Welcome welcome'),
-          centerTitle: true,
-        ),
-        body: new Center(
-          child: new RandomWords(),
-        )
+      title: 'Sea Sand',
+      theme: new ThemeData(
+        brightness: Brightness.light,
+        primaryColor: const Color(0xFFD87D4C),
+        primaryColorDark: const Color(0xFF4E0C07),
+        accentColor: const Color(0xFF719BC7),
+        disabledColor: const Color(0xFFC8CACB),
+        backgroundColor: const Color(0xFFEEEEEE),
       ),
+      home: new LoginScreen(),
     );
   }
 }

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "886442278655",
+    "firebase_url": "https://seasand-44e3f.firebaseio.com",
+    "project_id": "seasand-44e3f",
+    "storage_bucket": "seasand-44e3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886442278655:android:052b3357690aa80b",
+        "android_client_info": {
+          "package_name": "popeye.chillyprig.seasand"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "886442278655-rj5icp96q5cugrmbpd6digc2vb2ar239.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "886442278655-rj5icp96q5cugrmbpd6digc2vb2ar239.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPEkrAKwX9SKZZ9MExfmVRQDcmPztKxXg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
