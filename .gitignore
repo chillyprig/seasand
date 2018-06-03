@@ -348,3 +348,7 @@ playground.xcworkspace
 build/
 
 # End of https://www.gitignore.io/api/dart,swift,xcode,android,intellij,cocoapods,objective-c,androidstudio
+
+# Ignore firebase sensitive data fiels
+ios/Runner/GoogleService-Info.plist
+android/app/google-services.json
