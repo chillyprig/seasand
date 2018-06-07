@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import '../styles.dart';
-import 'login_contract.dart';
-import 'login_presenter.dart';
+import 'package:sea_sand/presenter/styles.dart';
+import 'package:sea_sand/presenter/login/login_contract.dart';
+import 'package:sea_sand/presenter/login/login_presenter.dart';
+import 'package:sea_sand/presenter/components/button/cp_button.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -36,27 +37,6 @@ class LoginScreenState extends State<LoginScreen> implements LoginContractView {
 
     final emptySpace = new Expanded(child: new Container());
 
-    final loadingButton = new Center(
-      child: new RaisedButton(
-        child: new CircularProgressIndicator(
-          backgroundColor: Styles.whiteColor,
-        ),
-        onPressed: null,
-        shape: new CircleBorder(),
-        disabledColor: Styles.facebookColor,
-        disabledTextColor: Styles.whiteColor,
-      ),
-    );
-
-    final buttonLoginFacebook = new RaisedButton(
-      color: Styles.facebookColor,
-      textColor: Styles.whiteColor,
-      onPressed: () {
-        presenter.performLoginFacebook();
-      },
-      child: new Text("Login with Facebook"),
-    );
-
     return new Scaffold(
         body: new SafeArea(
       child: new Container(
@@ -77,9 +57,15 @@ class LoginScreenState extends State<LoginScreen> implements LoginContractView {
               new Row(
                 children: <Widget>[
                   new Expanded(
-                      child: isFacebookLoading
-                          ? loadingButton
-                          : buttonLoginFacebook)
+                      child: CPButton(
+                        isLoading: isFacebookLoading,
+                        onPressed: () {
+                          presenter.performLoginFacebook();
+                        },
+                        backgroundColor: Styles.facebookColor,
+                        fontColor: Styles.whiteColor,
+                        child: new Text("Login with Facebook")
+                      ))
                 ],
               )
             ],
