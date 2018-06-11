@@ -83,7 +83,12 @@ class LoginScreenState extends State<LoginScreen> implements LoginContractView {
   @override
   void hideFacebookButtonLoading() {
     setState(() {
-//      isFacebookLoading = false;
+      isFacebookLoading = false;
     });
+  }
+
+  @override
+  void showErrorAlertToast() {
+    // TODO: implement showErrorAlertToast
   }
 }
