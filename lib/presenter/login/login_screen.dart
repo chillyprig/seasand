@@ -38,39 +38,39 @@ class LoginScreenState extends State<LoginScreen> implements LoginContractView {
     final emptySpace = new Expanded(child: new Container());
 
     return new Scaffold(
-        body: new SafeArea(
-      child: new Container(
-          decoration: new BoxDecoration(
-            image: new DecorationImage(
-                image: new AssetImage("assets/seasand_splash.jpg"),
-                fit: BoxFit.cover),
-          ),
-          padding: new EdgeInsets.all(32.0),
-          child: new Column(
-            children: <Widget>[
-              new Row(
+        body: new Container(
+            decoration: new BoxDecoration(
+              image: new DecorationImage(
+                  image: new AssetImage("assets/seasand_splash.jpg"),
+                  fit: BoxFit.cover),
+            ),
+            padding: new EdgeInsets.all(32.0),
+            child: new SafeArea(
+              child: new Column(
                 children: <Widget>[
-                  new Expanded(child: logo),
+                  new Row(
+                    children: <Widget>[
+                      new Expanded(child: logo),
+                    ],
+                  ),
+                  emptySpace,
+                  new Row(
+                    children: <Widget>[
+                      new Expanded(
+                          child: CPButton(
+                            isLoading: isFacebookLoading,
+                            onPressed: () {
+                              presenter.performLoginFacebook();
+                            },
+                            backgroundColor: Styles.facebookColor,
+                            fontColor: Styles.whiteColor,
+                            child: new Text("Login with Facebook")
+                          ))
+                    ],
+                  )
                 ],
               ),
-              emptySpace,
-              new Row(
-                children: <Widget>[
-                  new Expanded(
-                      child: CPButton(
-                        isLoading: isFacebookLoading,
-                        onPressed: () {
-                          presenter.performLoginFacebook();
-                        },
-                        backgroundColor: Styles.facebookColor,
-                        fontColor: Styles.whiteColor,
-                        child: new Text("Login with Facebook")
-                      ))
-                ],
-              )
-            ],
-          )),
-    ));
+            )));
   }
 
   @override

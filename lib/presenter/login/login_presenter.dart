@@ -58,6 +58,7 @@ class LoginPresenter implements LoginContractPresenter {
      * assert(await user.getIdToken() != null);
      */
     final FirebaseUser currentUser = await _fireBaseAuth.signInWithFacebook(accessToken: accessToken.token);
+
     /**
      * Now you can use await _auth.currentUser(); to access current user
      */

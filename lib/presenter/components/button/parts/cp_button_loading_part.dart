@@ -62,14 +62,15 @@ class CPButtonLoadingPartState extends State<CPButtonLoadingPart>
   Widget build(BuildContext context) {
 
     return new Center(
-        child: new Transform.rotate(
-          angle: animation.value,
-          child: new Icon(
-            Icons.wb_sunny,
-            size: 80.0,
-            color: Colors.orangeAccent,
-          ),
-        )
+      child: new RaisedButton(
+        child: new CircularProgressIndicator(
+          valueColor: AlwaysStoppedAnimation(widget.fontColor),
+        ),
+        onPressed: null,
+        shape: new CircleBorder(),
+        disabledColor: widget.backgroundColor,
+        disabledTextColor: widget.fontColor,
+      ),
     );
   }
 

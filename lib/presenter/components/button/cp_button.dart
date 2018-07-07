@@ -29,14 +29,10 @@ class _CPButtonState extends State<CPButton> {
   @override
   Widget build(BuildContext context) {
     // Access parent props via widget
-    return widget.isLoading
-        ? CPButtonLoadingPart(
-            backgroundColor: widget.backgroundColor,
-            fontColor: widget.fontColor)
-        : CPButtonPart(
-            child: widget.child,
-            backgroundColor: widget.backgroundColor,
-            fontColor: widget.fontColor,
-            onPressed: widget.onPressed);
+    return CPButtonPart(
+        child: widget.child,
+        backgroundColor: widget.backgroundColor,
+        fontColor: widget.fontColor,
+        onPressed: widget.onPressed);
   }
 }
